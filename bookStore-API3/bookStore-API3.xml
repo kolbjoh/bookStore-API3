@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>bookStore-API3</name>
+    </assembly>
+    <members>
+        <member name="T:bookStore_API3.Controllers.HomeController">
+            <summary>
+            book api
+            </summary>
+        </member>
+        <member name="M:bookStore_API3.Controllers.HomeController.Get(System.Int32)">
+            <summary>
+            Get values
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
