@@ -4,6 +4,57 @@
         <name>bookStore-API3</name>
     </assembly>
     <members>
+        <member name="T:bookStore_API3.Contracts.IAuthorRepository">
+            <summary>
+            tasks beeing used spesifically for Author, inclduing tasks frome IRepositoryBase, Servicese inherit from the contract
+            </summary>
+        </member>
+        <member name="T:bookStore_API3.Contracts.IRepositoryBase`1">
+            <summary>
+             tasks that will be used on all interfaces, inhertitated from this one "RepositoryBase"
+            </summary>
+        </member>
+        <member name="T:bookStore_API3.Controllers.AuthorsController">
+            <summary>
+            Endpoint used to interact with the Authors in the book Stores's database
+            </summary>
+        </member>
+        <member name="M:bookStore_API3.Controllers.AuthorsController.GetAuthors">
+            <summary>
+            Get all authors
+            </summary>
+            <returns>List of Authors</returns>
+        </member>
+        <member name="M:bookStore_API3.Controllers.AuthorsController.GetAuthor(System.Int32)">
+            <summary>
+            Get an author by Id
+            </summary>
+            <param name="id"></param>
+            <returns>An Author's record</returns>
+        </member>
+        <member name="M:bookStore_API3.Controllers.AuthorsController.Create(bookStore_API3.DTOs.AuthorCreateDTO)">
+            <summary>
+            Create an Author 
+            </summary>
+            <param name="author"></param>
+            <returns></returns>
+        </member>
+        <member name="M:bookStore_API3.Controllers.AuthorsController.Update(System.Int32,bookStore_API3.DTOs.AuthorUpdateDTO)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="author"></param>
+            <returns></returns>
+        </member>
+        <member name="M:bookStore_API3.Controllers.AuthorsController.Delete(System.Int32)">
+            <summary>
+             Remove an Author by id
+            </summary>
+            <param name="id"></param>
+            <param name="author"></param>
+            <returns></returns>
+        </member>
         <member name="T:bookStore_API3.Controllers.HomeController">
             <summary>
             book api
@@ -15,6 +66,17 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="T:bookStore_API3.Data.ApplicationDbContext">
+            <summary>
+            Definition on how to connect to the database
+            </summary>
+        </member>
+        <member name="M:bookStore_API3.Services.AuthorRepository.#ctor(bookStore_API3.Data.ApplicationDbContext)">
+            <summary>
+            Dependensi injection, inisialies in constructor
+            </summary>
+            <param name="db"></param>
         </member>
     </members>
 </doc>

@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace bookStore_API3.Data
-{
+{ /// <summary>
+/// Definition on how to connect to the database
+/// </summary>
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Author> Authors { get; set; }
