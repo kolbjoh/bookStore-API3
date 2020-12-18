@@ -16,6 +16,8 @@ using System.Reflection;
 using System.IO;
 using bookStore_API3.Contracts;
 using bookStore_API3.Services;
+using bookStore_API3.Mappings;
+using AutoMapper;
 
 namespace bookStore_API3
 {
@@ -47,8 +49,9 @@ namespace bookStore_API3
             }
 
             );
-            
-            
+
+            services.AddAutoMapper(typeof(Maps));
+
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { 
                     Title = "Book store API", 
@@ -59,6 +62,8 @@ namespace bookStore_API3
                 var xpath = Path.Combine(AppContext.BaseDirectory, xfile);
                 c.IncludeXmlComments(xpath);
             });
+
+            
 
             services.AddSingleton<ILoggerService, LoggerService>();
 
