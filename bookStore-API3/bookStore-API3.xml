@@ -107,6 +107,13 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:bookStore_API3.Controllers.UsersController.Login(bookStore_API3.DTOs.UserDTO)">
+            <summary>
+            User login Endpoint
+            </summary>
+            <param name="userDTO"></param>
+            <returns></returns>
+        </member>
         <member name="T:bookStore_API3.Data.ApplicationDbContext">
             <summary>
             Definition on how to connect to the database
