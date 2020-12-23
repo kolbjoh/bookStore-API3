@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using BookStore_UI.Contracts;
 using BookStore_UI.Service;
 using Microsoft.AspNetCore.Builder;
@@ -30,6 +31,7 @@ namespace BookStore_UI
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddHttpClient();
+            services.AddBlazoredLocalStorage();
             services.AddTransient<IAuthenticationRepository, AuthenticationRepository>();
 
         }
